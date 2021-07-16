@@ -12,7 +12,7 @@ import (
 const (
 	defaultServerAddr string = ""
 	defaultIterations int    = 10
-	maxCount          int    = 100
+	maxCount          int    = 10000
 )
 
 var (
