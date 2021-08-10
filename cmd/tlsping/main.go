@@ -23,6 +23,7 @@ func main() {
 	ca := fset.String("ca", "", "")
 	version := fset.Bool("version", false, "")
 	help := fset.Bool("help", false, "")
+	ip := fset.String("ip", "", "")
 	fset.Parse(os.Args[1:])
 
 	if *version {
@@ -59,6 +60,7 @@ func main() {
 		AvoidTLSHandshake:  *tcpOnly,
 		InsecureSkipVerify: *insecure,
 		RootCAs:            caCerts,
+		Ip:                 ip,
 	}
 	result, err := tlsping.Ping(serverAddr, &config)
 	if err != nil {
