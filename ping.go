@@ -28,6 +28,8 @@ type Config struct {
 	// Number of times to connect. The time spent by every connection will
 	// be measured and the results will be summarized.
 	Count int
+
+	Ip string
 }
 
 // Ping establishes network connections to the specified network addr
